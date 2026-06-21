@@ -13,17 +13,42 @@ Número de Pontos Turísticos: 50 Número de Pontos Turísticos: 30 */
 
 int main() {
   // definição das variáveis
-    char estado1,estado2;
+    char estado1;//,estado2;
     char codCarta1[10],codCarta2[10];
-    char nomeCidade1[50],nomeCidade1[50];
-    int populacao1;populacao2;
+    char nomeCidade1[50],nomeCidade2[50];
+    int populacao1,populacao2;
     float area1,area2;
     float pib1,pib2;
     int numTuristico1,numTuristico2;
     
   // Área para entrada de dados
+  
+     printf("Digite o nome cidade da carta 1: ");
+    fgets(nomeCidade1, 50, stdin);
+    printf("Digite o Estado da carta 1:\n");
+    scanf("%c", &estado1);
+    printf("Digite o Código da carta 1:\n");
+    scanf("%s", &codCarta1);
+    printf("Digite a população da carta 1: \n");
+    scanf("%d", &populacao1);
+    printf("Digite a Área da carta 1\n");
+    scanf("%f", &area1);
+    printf("Digite o PIB da carta 1\n");
+    scanf("%f", &pib1);
+
+    //tira o quebra linha da fgets
+    nomeCidade1[strcspn(nomeCidade1, "\n")] = 0;
 
   // Área para exibição dos dados da cidade
+
+      printf("Carta 1\n");
+      printf("Estado: %c \n",estado1);
+      printf("Código da Carta: %s \n",codCarta1);
+      printf("Nome da cidade: %s \n",nomeCidade1);
+      printf("População: %d \n", populacao1);
+      printf("Área: %f km² \n", area1);
+      printf("Pib: %f \n",pib1);
+
 
 return 0;
 } 
