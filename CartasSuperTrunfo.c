@@ -19,7 +19,9 @@ int main() {
     char nomeCidade1[50],nomeCidade2[50];
     int populacao1,populacao2,numTuristico1,numTuristico2;   
     float area1,area2;
-    float pib1,pib2;
+    float pib1,pib2,pibpercap1,pibpercap2;
+    float DensidadePopulacional1,DensidadePopulacional2;
+
   // Área para entrada de dados das CARTA ALTERNADO, PARA USAR O FGETS PRIMEIRO SEM DAR ERRO
   //NOME CIDADE
     printf("Digite o nome cidade da CARTA 1: ");
@@ -62,6 +64,12 @@ int main() {
     nomeCidade1[strcspn(nomeCidade1, "\n")] = 0;
     nomeCidade2[strcspn(nomeCidade2, "\n")] = 0;
 
+   //cálculos Densidade e pib per Capita 
+   DensidadePopulacional1 = populacao1/area1
+   DensidadePopulacional2 = populacao2/area2
+   pibpercap1 = pib1/populacao1
+   pibpercap2 = pib2/populacao2
+
   // Área para exibição dos dados da cidade 1
 
       printf("Carta 1\n");
@@ -72,6 +80,8 @@ int main() {
       printf("Área: %2.f km² \n", area1);
       printf("Pib: %2.f bilhões de reais \n",pib1);    
       printf("Nº de pontos Turísticos: %d \n",numTuristico1);
+      printf("Densidade Populacional: %2.f \n",DensidadePopulacional);
+      printf("PIB per Capita: %2.f \n",pibpercap1);
       printf("\n");
 
   // Área para exibição dos dados da cidade 2
@@ -84,6 +94,8 @@ int main() {
       printf("Área: %f km² \n", area2);
       printf("Pib: %f bilhões de reais \n",pib2);
       printf("Nº de pontos Turísticos: %d \n",numTuristico2);
+      printf("Densidade Populacional: %2.f \n",DensidadePopulaciona2);
+      printf("PIB per Capita: %2.f \n",pibpercap2);
       printf("\n");
 
 
