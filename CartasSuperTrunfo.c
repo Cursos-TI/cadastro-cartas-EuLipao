@@ -65,10 +65,10 @@ int main() {
     nomeCidade2[strcspn(nomeCidade2, "\n")] = 0;
 
    //cálculos Densidade e pib per Capita 
-   DensidadePopulacional1 = populacao1/area1
-   DensidadePopulacional2 = populacao2/area2
-   pibpercap1 = pib1/populacao1
-   pibpercap2 = pib2/populacao2
+   DensidadePopulacional1 = populacao1/area1;
+   DensidadePopulacional2 = populacao2/area2;
+   pibpercap1 = pib1/populacao1;
+   pibpercap2 = pib2/populacao2;
 
   // Área para exibição dos dados da cidade 1
 
@@ -80,7 +80,7 @@ int main() {
       printf("Área: %2.f km² \n", area1);
       printf("Pib: %2.f bilhões de reais \n",pib1);    
       printf("Nº de pontos Turísticos: %d \n",numTuristico1);
-      printf("Densidade Populacional: %2.f \n",DensidadePopulacional);
+      printf("Densidade Populacional: %2.f \n",DensidadePopulacional1);
       printf("PIB per Capita: %2.f \n",pibpercap1);
       printf("\n");
 
@@ -94,7 +94,7 @@ int main() {
       printf("Área: %f km² \n", area2);
       printf("Pib: %f bilhões de reais \n",pib2);
       printf("Nº de pontos Turísticos: %d \n",numTuristico2);
-      printf("Densidade Populacional: %2.f \n",DensidadePopulaciona2);
+      printf("Densidade Populacional: %2.f \n",DensidadePopulacional2);
       printf("PIB per Capita: %2.f \n",pibpercap2);
       printf("\n");
 
