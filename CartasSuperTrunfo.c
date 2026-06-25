@@ -19,8 +19,9 @@ int main() {
     char nomeCidade1[50],nomeCidade2[50];
     int populacao1,populacao2,numTuristico1,numTuristico2;   
     float area1,area2;
-    float pib1,pib2,pibpercap1,pibpercap2;
+    float pib1,pib2;
     float DensidadePopulacional1,DensidadePopulacional2;
+    float pibpercap1,pibpercap2;
 
   // Área para entrada de dados das CARTA ALTERNADO, PARA USAR O FGETS PRIMEIRO SEM DAR ERRO
   //NOME CIDADE
