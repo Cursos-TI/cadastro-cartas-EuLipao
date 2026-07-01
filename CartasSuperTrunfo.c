@@ -31,31 +31,37 @@ int main() {
     fgets(nomeCidade1, 50, stdin);
       printf("Digite o nome cidade da CARTA 2: ");
       fgets(nomeCidade2, 50, stdin);
+
   // ESTADO DA CARTA A,B,C,...
     printf("Digite o Estado da CARTA 1: ");
     scanf(" %c", &estado1);
       printf("Digite o Estado da CARTA 2: ");
       scanf(" %c", &estado2);
+
   // CODIGO DA CARTA
     printf("Digite o Código da CARTA 1: ");
     scanf("%s", &codCarta1);
       printf("Digite o Código da CARTA 2: ");
-      scanf("%s", &codCarta2);
+      scanf("%s", &codCarta2); 
+
   //POPULAÇÃO
     printf("Digite a população da CARTA 1: ");
     scanf("%d", &populacao1);
       printf("Digite a população da CARTA 2: ");
      scanf("%d", &populacao2);    
+
   //AREA DE TERRITORIO
     printf("Digite a Área da CARTA 1: ");
     scanf("%f", &area1);
       printf("Digite a Área da CARTA 2: ");
       scanf("%f", &area2);   
+
   //PIB
     printf("Digite o PIB da CARTA 1: ");
     scanf("%f", &pib1);
       printf("Digite o PIB da CARTA 2: ");
       scanf("%f", &pib2);
+
   //PONTOS TURISTICOS
     printf("Digite a quantidade de pontos turísticos da CARTA 1 : ");
     scanf("%d", &numTuristico1);
@@ -118,6 +124,21 @@ int main() {
     printf("PIB per Capita: %d \n",pibpercap1 > pibpercap2);
     printf("Super Poder: %d \n",superpoder1 > superpoder2);
 
+    //teste IF para ver condição de algum item 
+    printf("\n");
+    printf("***** Teste POPULAÇÃO *****\n");
+    printf("Carta 1 - %s: %d \n", nomeCidade1,populacao1);
+    printf("Carta 2 - %s: %d \n",nomeCidade2,populacao2);
+    
+    if (populacao1 > populacao2 ){
+        
+        printf("Resultado: Carta 1 %s venceu!\n",nomeCidade1);
+        
+    }else{
+        printf("Resultado: Carta 2 %s venceu!\n",nomeCidade2);
+        
+    }
+    printf("\n");
 return 0;
 
 } 
