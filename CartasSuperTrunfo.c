@@ -24,6 +24,10 @@ int main() {
     float DensidadePopulacional1,DensidadePopulacional2;
     float pibpercap1,pibpercap2;
     float superpoder1,superpoder2;
+    //char CV + nome aguarda a ConVersão do snprintf do int para char
+    char CVpopulacao1[50],CVnumTuristico1[50],CVarea1[20],CVpib1[30],CVdesidadeP1[50],CVpibpercap1[50],CVsuperpoder1[50];
+
+   //snprintf(variel que vai armazenar, sizeof(variel que vai armazenar), "%d", nome da variavel que vai converter);
     
     printf("*****************\n");
     printf("* Super Trunfo! *\n");
@@ -98,12 +102,26 @@ switch (opcao)
    superpoder1 = (float)populacao1+area1+pib1+numTuristico1+pibpercap1+DensidadePopulacional1;
    superpoder2 = (float)populacao2+area2+pib2+numTuristico2+pibpercap2+DensidadePopulacional2;
 
+   //converter int e float para string para usar no espaçamento da apresentação das cartas
+   //snprintf(variel que vai armazenar, sizeof(variel que vai armazenar), "%d", nome da variavel que vai converter);
+
+    snprintf(CVpopulacao1, sizeof(CVpopulacao1), "%d", populacao1);
+    snprintf(CVarea1, sizeof(CVarea1), "%f", area1);
+    snprintf(CVdesidadeP1, sizeof(CVdesidadeP1), "%f", DensidadePopulacional1);
+    snprintf(CVnumTuristico1, sizeof(CVnumTuristico1), "%d", numTuristico1);
+    snprintf(CVpib1, sizeof(CVpib1), "%f", pib1);
+    snprintf(CVpibpercap1, sizeof(CVpibpercap1),"%f",pibpercap1);
+    snprintf(CVsuperpoder1, sizeof(CVsuperpoder1),"%f", superpoder1);
+
+    
+
+      
   // Área para exibição dos dados da cidade 1
 
-      printf("Carta 1"), printf("      "), printf("Carta 2\n");
-      printf("Estado: %c",estado1),printf("      "),printf("Estado: %c \n",estado2);
-      printf("Código da Carta: %s",codCarta1),printf("      "),printf("Código da Carta: %s \n",codCarta2);
-      printf("Nome da cidade: %s",nomeCidade1),printf("      "),printf("Nome cidade: %s \n",nomeCidade2);
+      printf("Carta 1"), printf("                       "), printf("Carta 2\n");
+      printf("Estado: %c",estado1),printf("              "),printf("Estado: %c \n",estado2);
+      printf("Código da Carta: %s",codCarta1),printf("   "),printf("Código da Carta: %s \n",codCarta2);
+      printf("Nome da cidade: %s",nomeCidade1),printf("  "),printf("Nome cidade: %s \n",nomeCidade2);
       printf("População: %d                                     População: %d \n", populacao1,populacao2);
       printf("Área: %.2f km²                                    Área: %.2f km²\n", area1,area2);
       printf("Pib: %.2f bilhões de reais                        Pib:%.2f bilhões de reais  \n",pib1,pib2);    
