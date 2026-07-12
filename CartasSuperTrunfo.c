@@ -12,20 +12,37 @@ PIB: 699.28 bilhões de reais    PIB: 300.50 bilhões de reais
 Número de Pontos Turísticos: 50 Número de Pontos Turísticos: 30 */
 
 int main() {
+
   // definição das variáveis
 
     char estado1,estado2;
     char codCarta1[10],codCarta2[10];
     char nomeCidade1[50],nomeCidade2[50];
-    int populacao1,populacao2,numTuristico1,numTuristico2;   
+    int populacao1,populacao2,numTuristico1,numTuristico2,opcao;  
     float area1,area2;
     float pib1,pib2;
     float DensidadePopulacional1,DensidadePopulacional2;
     float pibpercap1,pibpercap2;
     float superpoder1,superpoder2;
     
+    printf("*****************\n");
+    printf("* Super Trunfo! *\n");
+    printf("*****************\n");
+   
+    printf("\n");
+    printf("Escolha uma opção\n");
+    printf("1. Jogar\n");
+    printf("2. Regras\n");
+    printf("3. Sair\n");
+    scanf("%d",&opcao);
+    printf("\n");
 
-  // Área para entrada de dados das CARTA ALTERNADO, PARA USAR O FGETS PRIMEIRO SEM DAR ERRO
+switch (opcao)
+{
+  case 1:
+      // Área para entrada de dados das CARTA ALTERNADO, PARA USAR O FGETS PRIMEIRO SEM DAR ERRO(depois do swite não funciona só se usar while((getchar()) != '\n') para limpar o buffer)
+  while ((getchar()) != '\n');
+  
   //NOME CIDADE
     printf("Digite o nome cidade da CARTA 1: ");
     fgets(nomeCidade1, 50, stdin);
@@ -83,23 +100,23 @@ int main() {
 
   // Área para exibição dos dados da cidade 1
 
-      printf("Carta 1\n");
-      printf("Estado: %c \n",estado1);
-      printf("Código da Carta: %s \n",codCarta1);
-      printf("Nome da cidade: %s \n",nomeCidade1);
-      printf("População: %d \n", populacao1);
-      printf("Área: %.2f km² \n", area1);
-      printf("Pib: %.2f bilhões de reais \n",pib1);    
-      printf("Nº de pontos Turísticos: %d \n",numTuristico1);
-      printf("Densidade Populacional: %.2f \n",DensidadePopulacional1);
-      printf("PIB per Capita: %f \n",pibpercap1);
-      printf("Super Poder da Carta 1 : %f  \n", superpoder1);
+      printf("Carta 1"), printf("      "), printf("Carta 2\n");
+      printf("Estado: %c",estado1),printf("      "),printf("Estado: %c \n",estado2);
+      printf("Código da Carta: %s",codCarta1),printf("      "),printf("Código da Carta: %s \n",codCarta2);
+      printf("Nome da cidade: %s",nomeCidade1),printf("      "),printf("Nome cidade: %s \n",nomeCidade2);
+      printf("População: %d                                     População: %d \n", populacao1,populacao2);
+      printf("Área: %.2f km²                                    Área: %.2f km²\n", area1,area2);
+      printf("Pib: %.2f bilhões de reais                        Pib:%.2f bilhões de reais  \n",pib1,pib2);    
+      printf("Nº de pontos Turísticos: %d                         Nº de pontos Turísticos: %d \n",numTuristico1,numTuristico2);
+      printf("Densidade Populacional: %.2f                 Densidade Populacional: %.2f \n",DensidadePopulacional1,DensidadePopulacional2);
+      printf("PIB per Capita: %f                                PIB per Capita: %f \n",pibpercap1,pibpercap2);
+      printf("Super Poder da Carta 1 : %f                Super Poder da Carta 1 : %f \n", superpoder1,superpoder2);
       printf("\n");
 
   // Área para exibição dos dados da cidade 2
 
-      printf("Carta 2\n");
-      printf("Estado: %c \n",estado2);
+      
+    /*
       printf("Código da Carta: %s \n",codCarta2);
       printf("Nome da cidade: %s \n",nomeCidade2);
       printf("População: %d \n", populacao2);
@@ -109,11 +126,31 @@ int main() {
       printf("Densidade Populacional: %.2f \n",DensidadePopulacional2);
       printf("PIB per Capita: %f \n",pibpercap2);
       printf("Super Poder da CARTA 2 : %f  \n",  superpoder2);
-      printf("\n");
+      printf("\n");*/
 
+
+  break;
+  case 2:
+
+     printf("O jogo se trata de um duelo de cartas\n");
+     printf("O sistema solicita as entradas alternadas da Carta 1 e depois da Carta 2.\n");
+     printf("São pedido os dados como Nome da cidade, População,PIB, área m² \n\n");
+  
+  break;
+  case 3:
+     
+     printf("Jogo finalizado.\n");
+     printf("\n");
+  break;
+    
+  default:
+  printf("Opção invalida!.");
+  break;
+}
+  
 
   // comparações de cartas
-
+/*
   printf("*** COMPARAÇÕES DAS CARTAS ***\n");
   printf("Se 1 Carta 1 Ganhou - Se 0 Carta 2 Ganhou\n");
     printf("População: %d \n", populacao1 > populacao2);
@@ -123,9 +160,9 @@ int main() {
     printf("Densidade Populacional: %d \n",DensidadePopulacional1<DensidadePopulacional2);
     printf("PIB per Capita: %d \n",pibpercap1 > pibpercap2);
     printf("Super Poder: %d \n",superpoder1 > superpoder2);
-
+*/
     //teste IF para ver condição de algum item 
-    printf("\n");
+   /*printf("\n");
     printf("***** Teste POPULAÇÃO *****\n");
     printf("Carta 1 - %s: %d \n", nomeCidade1,populacao1);
     printf("Carta 2 - %s: %d \n",nomeCidade2,populacao2);
@@ -138,7 +175,7 @@ int main() {
         printf("Resultado: Carta 2 %s venceu!\n",nomeCidade2);
         
     }
-    printf("\n");
+    printf("\n");*/
 return 0;
 
 } 
