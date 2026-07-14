@@ -18,16 +18,13 @@ int main() {
     char estado1,estado2;
     char codCarta1[10],codCarta2[10];
     char nomeCidade1[50],nomeCidade2[50];
-    int populacao1,populacao2,numTuristico1,numTuristico2,opcao;  
+    int populacao1,populacao2,numTuristico1,numTuristico2,opcao,opcao2;  
     float area1,area2;
     float pib1,pib2;
     float DensidadePopulacional1,DensidadePopulacional2;
     float pibpercap1,pibpercap2;
     float superpoder1,superpoder2;
-    //char CV + nome aguarda a ConVersão do snprintf do int para char
-    char CVpopulacao1[50],CVnumTuristico1[50],CVarea1[20],CVpib1[30],CVdesidadeP1[50],CVpibpercap1[50],CVsuperpoder1[50];
-
-   //snprintf(variel que vai armazenar, sizeof(variel que vai armazenar), "%d", nome da variavel que vai converter);
+    
     
     printf("*****************\n");
     printf("* Super Trunfo! *\n");
@@ -101,40 +98,26 @@ switch (opcao)
    pibpercap2 = (float)pib2/populacao2;
    superpoder1 = (float)populacao1+area1+pib1+numTuristico1+pibpercap1+DensidadePopulacional1;
    superpoder2 = (float)populacao2+area2+pib2+numTuristico2+pibpercap2+DensidadePopulacional2;
-
-   //converter int e float para string para usar no espaçamento da apresentação das cartas
-   //snprintf(variel que vai armazenar, sizeof(variel que vai armazenar), "%d", nome da variavel que vai converter);
-
-    snprintf(CVpopulacao1, sizeof(CVpopulacao1), "%d", populacao1);
-    snprintf(CVarea1, sizeof(CVarea1), "%f", area1);
-    snprintf(CVdesidadeP1, sizeof(CVdesidadeP1), "%f", DensidadePopulacional1);
-    snprintf(CVnumTuristico1, sizeof(CVnumTuristico1), "%d", numTuristico1);
-    snprintf(CVpib1, sizeof(CVpib1), "%f", pib1);
-    snprintf(CVpibpercap1, sizeof(CVpibpercap1),"%f",pibpercap1);
-    snprintf(CVsuperpoder1, sizeof(CVsuperpoder1),"%f", superpoder1);
-
-    
-
       
   // Área para exibição dos dados da cidade 1
 
-      printf("Carta 1"), printf("                       "), printf("Carta 2\n");
-      printf("Estado: %c",estado1),printf("              "),printf("Estado: %c \n",estado2);
-      printf("Código da Carta: %s",codCarta1),printf("   "),printf("Código da Carta: %s \n",codCarta2);
-      printf("Nome da cidade: %s",nomeCidade1),printf("  "),printf("Nome cidade: %s \n",nomeCidade2);
-      printf("População: %d                                     População: %d \n", populacao1,populacao2);
-      printf("Área: %.2f km²                                    Área: %.2f km²\n", area1,area2);
-      printf("Pib: %.2f bilhões de reais                        Pib:%.2f bilhões de reais  \n",pib1,pib2);    
-      printf("Nº de pontos Turísticos: %d                         Nº de pontos Turísticos: %d \n",numTuristico1,numTuristico2);
-      printf("Densidade Populacional: %.2f                 Densidade Populacional: %.2f \n",DensidadePopulacional1,DensidadePopulacional2);
-      printf("PIB per Capita: %f                                PIB per Capita: %f \n",pibpercap1,pibpercap2);
-      printf("Super Poder da Carta 1 : %f                Super Poder da Carta 1 : %f \n", superpoder1,superpoder2);
+      printf("Carta 1\n");
+      printf("Estado: %c\n",estado1);
+      printf("Código da Carta: %s\n",codCarta1);
+      printf("Nome da cidade: %s \n",nomeCidade1);
+      printf("População: %d\n", populacao1);
+      printf("Área: %.2f km²\n", area1);
+      printf("Pib: %.2f bilhões de reais\n",pib1);    
+      printf("Nº de pontos Turísticos: %d\n",numTuristico1);
+      printf("Densidade Populacional: %.2f \n",DensidadePopulacional1);
+      printf("PIB per Capita: %f\n",pibpercap1);
+      printf("Super Poder da Carta 1 : %f \n", superpoder1);
       printf("\n");
 
   // Área para exibição dos dados da cidade 2
 
-      
-    /*
+      printf("Carta 2\n");
+      printf("Estado: %c\n",estado2);
       printf("Código da Carta: %s \n",codCarta2);
       printf("Nome da cidade: %s \n",nomeCidade2);
       printf("População: %d \n", populacao2);
@@ -144,7 +127,163 @@ switch (opcao)
       printf("Densidade Populacional: %.2f \n",DensidadePopulacional2);
       printf("PIB per Capita: %f \n",pibpercap2);
       printf("Super Poder da CARTA 2 : %f  \n",  superpoder2);
-      printf("\n");*/
+      printf("\n");
+
+      printf("Escolha algum atributo para comparar:\n");
+      printf("1. População.\n");
+      printf("2. Área.\n");
+      printf("3. Pib.\n");
+      printf("4. Pontos Turisticos.\n");
+      printf("5. Densidade Populacional.\n");
+      printf("6. Pib per capita. \n");
+      printf("7. Super Poder. \n");
+      printf("\n");
+      scanf("%d",&opcao2);
+
+      switch (opcao2)
+      {
+      case 1:
+          if (populacao1 == populacao2)
+          {
+           printf("Empate\n");
+           printf("\n");
+
+          } else if (populacao1 > populacao2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("População: %d - %d \n",populacao1,populacao2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("População: %d - %d \n",populacao1,populacao2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }
+          
+        break;
+
+        case 2:
+
+        if (area1 == area2)
+          {
+           printf("Empate\n");
+           printf("\n");
+          } else if (area1 > area2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Área: %.2f km² - %.2f km² \n",area1,area2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Área: %.2f km² -%.2f km² \n",area1,area2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }
+          
+          break;
+          case 3:
+            if (pib1 == pib2)
+          {
+           printf("Empate\n");
+           printf("\n");
+
+          } else if (pib1 > pib2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s\n",nomeCidade1,nomeCidade2);
+            printf("Pib: %f - %f\n",pib1,pib2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s\n",nomeCidade1,nomeCidade2);
+            printf("Pib: %f - %f\n",pib1,pib2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }
+          
+          break;
+
+          case 5:
+
+          if (DensidadePopulacional1 == DensidadePopulacional2)
+          {
+           printf("Empate\n");
+           printf("\n");
+
+          } else if (DensidadePopulacional1 < DensidadePopulacional2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s\n",nomeCidade1,nomeCidade2);
+            printf("Densidade Populacional: %f - %f\n",DensidadePopulacional1,DensidadePopulacional2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Densidade Populacional: %f - %f \n",DensidadePopulacional1,DensidadePopulacional2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }       
+          break;
+
+          case 6:
+          if (pibpercap1 == pibpercap2)
+          {
+           printf("Empate\n");
+           printf("\n");
+
+          } else if (pibpercap1 > pibpercap2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Pib per capita: %f - %f \n",pibpercap1,pibpercap2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Pib per capita: %f - %f \n",pibpercap1,pibpercap2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }  
+          break;
+          case 7:
+          if (superpoder1 == superpoder2)
+          {
+           printf("Empate\n");
+           printf("\n");
+
+          } else if (superpoder1 > superpoder2)
+          {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Super Poder: %f - %f \n",superpoder1,superpoder2);
+            printf("Carta 1 Venceu! \n");
+            printf("\n");
+
+          }else {
+            printf("Cidade 1 %s   - Cidade 2 %s \n",nomeCidade1,nomeCidade2);
+            printf("Super Poder: %d - %d \n",superpoder1,superpoder2);
+            printf("Carta 2 Venceu! \n");
+            printf("\n");
+
+          }  
+
+          break;
+      
+      default:
+
+          printf("Opção invalida! \n");
+          printf("\n");
+
+        break;
+      }
 
 
   break;
